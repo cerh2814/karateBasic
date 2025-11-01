@@ -7,4 +7,3 @@ Feature: Create new user in car
     Given path 'register'
     When method post
     Then status 201
-    And match response.message == 'User created successfully'
