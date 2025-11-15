@@ -1,7 +1,7 @@
 Feature: Login via form
 
   Background:
-    * url 'https://0a6f002d048eb00c822ca26c0057008a.web-security-academy.net'
+    * url 'https://0ac2009c047e964781f957f9007a00ec.web-security-academy.net'
     * header Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
     * configure connectTimeout = 5000
     * configure readTimeout = 5000
@@ -39,8 +39,8 @@ Feature: Login via form
     # 2) POST usando form fields (Karate pone Content-Type automáticamente)
     Given path '/login'
     And form field csrf = csrf
-    And form field username = 'wiener'
-    And form field password = 'peter'
+    And form field username = 'aq'
+    And form field password = 'harley'
     When method post
 
     # debug
@@ -73,8 +73,8 @@ Feature: Login via form
     * configure followRedirects = false
     Given path '/login'
     And form field csrf = csrf
-    And form field username = 'wiener'
-    And form field password = 'peter'
+    And form field username = 'aq'
+    And form field password = 'harley'
     When method post
     * print 'login status:', responseStatus
     * assert responseStatus == 302 || responseStatus == 200
