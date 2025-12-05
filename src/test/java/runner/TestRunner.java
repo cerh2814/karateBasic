@@ -7,7 +7,7 @@ public class TestRunner {
     @Karate.Test
     public Karate runCreateProductFeature() {
         // Asume: src/test/resources/feature/createnewproduct.feature
-        return Karate.run("classpath:feature/users/Burp.feature").relativeTo(getClass());
+        return Karate.run("classpath:feature/conduit/tags.feature").relativeTo(getClass());
     }
 
 //    @Karate.Test

@@ -10,7 +10,7 @@ Feature: Account API Testing - demoqa.com
     * def globalUserID = ''
     * def globalAuthToken = ''
 
-  ---
+
 
   Scenario: 1. Crear Usuario y Almacenar ID
     Given path '/User'
@@ -21,7 +21,7 @@ Feature: Account API Testing - demoqa.com
     * def globalUserID = response.userID # ➡️ Almacenamos el userID en la variable global
     * print 'Usuario ID Creado: ' + globalUserID
 
-  ---
+
 
   Scenario: 2. Generar Token y Almacenar
     Given path '/GenerateToken'
@@ -34,7 +34,7 @@ Feature: Account API Testing - demoqa.com
     * def globalAuthToken = response.token # ➡️ Almacenamos el token en la variable global
     * print 'Token de Autenticación: ' + globalAuthToken
 
-  ---
+
 
   Scenario: 3. Verificar Estado Autorizado del Usuario (Authorized)
     Given path '/Authorized'
@@ -44,7 +44,6 @@ Feature: Account API Testing - demoqa.com
     When method POST
     Then status 200
 
-  ---
 
   Scenario: 4. ✅ GET /Account/v1/User/{UUID} (Consultar Usuario por userId)
 

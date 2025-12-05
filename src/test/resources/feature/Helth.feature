@@ -1,4 +1,3 @@
-gherkin
 Feature: Prueba Health - mejorado
 
   Background:
